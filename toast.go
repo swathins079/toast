@@ -351,7 +351,7 @@ func invokeTemporaryScript(content string) error {
 		return err
 	}
 	cmd := exec.Command("PowerShell", "-ExecutionPolicy", "Bypass", "-File", file)
-	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+	cmd.SysProcAttr = &syscall.SysProcAttr{}//HideWindow: true}
 	if err = cmd.Run(); err != nil {
 		return err
 	}
