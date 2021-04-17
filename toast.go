@@ -259,63 +259,62 @@ func (n *Notification) Push() error {
 //   - silent
 //
 // Handle the error appropriately according to how your app should work.
-func Audio(name string) (toastAudio, error) {
+func Audio(name string) (toastAudio) {
 	switch strings.ToLower(name) {
 	case "default":
-		return Default, nil
+		return Default
 	case "im":
-		return IM, nil
+		return IM
 	case "mail":
-		return Mail, nil
+		return Mail
 	case "reminder":
-		return Reminder, nil
+		return Reminder
 	case "sms":
-		return SMS, nil
+		return SMS
 	case "loopingalarm":
-		return LoopingAlarm, nil
+		return LoopingAlarm
 	case "loopingalarm2":
-		return LoopingAlarm2, nil
+		return LoopingAlarm2
 	case "loopingalarm3":
-		return LoopingAlarm3, nil
+		return LoopingAlarm3
 	case "loopingalarm4":
-		return LoopingAlarm4, nil
+		return LoopingAlarm4
 	case "loopingalarm5":
-		return LoopingAlarm5, nil
+		return LoopingAlarm5
 	case "loopingalarm6":
-		return LoopingAlarm6, nil
+		return LoopingAlarm6
 	case "loopingalarm7":
-		return LoopingAlarm7, nil
+		return LoopingAlarm7
 	case "loopingalarm8":
-		return LoopingAlarm8, nil
+		return LoopingAlarm8
 	case "loopingalarm9":
-		return LoopingAlarm9, nil
+		return LoopingAlarm9
 	case "loopingalarm10":
-		return LoopingAlarm10, nil
+		return LoopingAlarm10
 	case "loopingcall":
-		return LoopingCall, nil
+		return LoopingCall
 	case "loopingcall2":
-		return LoopingCall2, nil
+		return LoopingCall2
 	case "loopingcall3":
-		return LoopingCall3, nil
+		return LoopingCall3
 	case "loopingcall4":
-		return LoopingCall4, nil
+		return LoopingCall4
 	case "loopingcall5":
-		return LoopingCall5, nil
+		return LoopingCall5
 	case "loopingcall6":
-		return LoopingCall6, nil
+		return LoopingCall6
 	case "loopingcall7":
-		return LoopingCall7, nil
+		return LoopingCall7
 	case "loopingcall8":
-		return LoopingCall8, nil
+		return LoopingCall8
 	case "loopingcall9":
-		return LoopingCall9, nil
+		return LoopingCall9
 	case "loopingcall10":
-		return LoopingCall10, nil
+		return LoopingCall10
 	case "silent":
-		return Silent, nil
-	default:
-		return Default, ErrorInvalidAudio
+		return Silent
 	}
+	return Default
 }
 
 // Returns a toastDuration given a user-provided input (useful for cli apps).
